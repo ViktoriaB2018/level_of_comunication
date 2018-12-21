@@ -1,4 +1,4 @@
-## level_of_comunication
+## Test Level of comunication
 Level of comunication - test helps you to know your level of communication. 
 
 Information from the source - https://syntone.ru/psytesty/vash-uroven-obshhitelnosti/
