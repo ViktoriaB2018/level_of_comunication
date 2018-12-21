@@ -1,5 +1,7 @@
 ## level_of_comunication
-Level of comunication - test helps to know your level of communication. https://syntone.ru/psytesty/vash-uroven-obshhitelnosti/
+Level of comunication - test helps to know your level of communication. 
+Information from the source - https://syntone.ru/psytesty/vash-uroven-obshhitelnosti/
+
 To complete the test you need to honestly answer all the questions. The program will calculate your score and will give an answer whether you are a sociable person or not.
 
 ## How to use
