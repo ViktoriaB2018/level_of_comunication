@@ -1,10 +1,12 @@
 class ResultPrinter
+  TOTAL_ANSWERS = 7
+
   def initialize(file_name)
     @answers = []
 
     return nil unless File.exist?(file_name)
 
-    7.times do
+    TOTAL_ANSWERS.times do
       file = File.new(file_name, 'r:UTF-8')
       @answers = file.readlines
       file.close
@@ -12,6 +14,7 @@ class ResultPrinter
   end
 
   def print_result(test)
+    puts test.version
     puts "Ваш результат #{test.points} баллов:"
 
     case test.points

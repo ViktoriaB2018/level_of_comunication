@@ -1,12 +1,16 @@
 class Test
   attr_reader :points
-  
+
+  attr_accessor :version
+
+  TOTAL_QUESTIONS = 16
+
   def initialize(file_name)
     @questions = []
 
     return nil unless File.exist?(file_name)
 
-    16.times do
+    TOTAL_QUESTIONS.times do
       file = File.new(file_name, 'r:UTF-8')
       @questions = file.readlines
       file.close
@@ -20,10 +24,14 @@ class Test
     @questions[@current_question]
   end
 
-  def count_points(answer)
+  def numbers_with_inversed_points?
     numbers_with_inversed_points = [4, 9, 10, 12]
-    if numbers_with_inversed_points.include?(@current_question) && answer == 2 ||
-      !numbers_with_inversed_points.include?(@current_question) && answer == 1
+    numbers_with_inversed_points.include?(@current_question)
+  end
+
+  def count_points(answer)
+    if numbers_with_inversed_points? && answer == 2 ||
+      !numbers_with_inversed_points? && answer == 1
       @points += 2
     elsif answer == 3
       @points += 1

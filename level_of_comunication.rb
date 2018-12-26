@@ -1,10 +1,13 @@
 current_path = './' + File.dirname(__FILE__)
 
-require current_path + '/test.rb'
-require current_path + '/result_printer.rb'
+require current_path + '/lib/test.rb'
+require current_path + '/lib/result_printer.rb'
+
+VERSION = 'Тест на коммуникабельность, версия 3.'
 
 printer = ResultPrinter.new(current_path + '/files/answers.txt')
 test = Test.new(current_path + '/files/questions.txt')
+test.version = VERSION
 
 puts 'Как вас зовут?'
 name = gets.chomp.encode('UTF-8')
