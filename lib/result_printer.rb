@@ -4,8 +4,6 @@ class ResultPrinter
   def initialize(file_name)
     @answers = []
 
-    return nil unless File.exist?(file_name)
-
     TOTAL_ANSWERS.times do
       file = File.new(file_name, 'r:UTF-8')
       @answers = file.readlines

@@ -1,7 +1,7 @@
-current_path = './' + File.dirname(__FILE__)
+require_relative 'lib/test.rb'
+require_relative 'lib/result_printer.rb'
 
-require current_path + '/lib/test.rb'
-require current_path + '/lib/result_printer.rb'
+current_path = File.dirname(__FILE__)
 
 VERSION = 'Тест на коммуникабельность, версия 3.'
 
