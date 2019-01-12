@@ -1,22 +1,17 @@
 class Test
   attr_reader :points
-
   attr_accessor :version
 
-  TOTAL_QUESTIONS = 16
   NUMBERS_WITH_INVERSED_POINTS = [4, 9, 10, 12]
 
   def initialize(file_name)
     @questions = []
-
-    TOTAL_QUESTIONS.times do
-      file = File.new(file_name, 'r:UTF-8')
-      @questions = file.readlines
-      file.close
-    end
-
     @points = 0
     @current_question = 0
+
+    file = File.new(file_name, 'r:UTF-8')
+    @questions = file.readlines
+    file.close
   end
 
   def next_question

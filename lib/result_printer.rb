@@ -1,14 +1,10 @@
 class ResultPrinter
-  TOTAL_ANSWERS = 7
-
   def initialize(file_name)
     @answers = []
 
-    TOTAL_ANSWERS.times do
-      file = File.new(file_name, 'r:UTF-8')
-      @answers = file.readlines
-      file.close
-    end
+    file = File.new(file_name, 'r:UTF-8')
+    @answers = file.readlines
+    file.close
   end
 
   def print_result(test)
